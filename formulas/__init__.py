@@ -1,3 +1,16 @@
+from functools import lru_cache as memoize
+
+
+@memoize()
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+
 # Sieve of Eratosthenes
 # Code by David Eppstein, UC Irvine, 28 Feb 2002
 # http://code.activestate.com/recipes/117119/
@@ -35,6 +48,7 @@ def gen_primes():
             del D[q]
 
         q += 1
+
 
 def factorial(n):
     product = 1
