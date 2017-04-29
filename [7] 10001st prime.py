@@ -1,4 +1,4 @@
-from formulas.gen_primes import gen_primes
+from formulas import gen_primes
 
 p = gen_primes()
 
