@@ -50,6 +50,7 @@ def gen_primes():
         q += 1
 
 
+@memoize()
 def factorial(n):
     product = 1
     for i in range(n, 0, -1):
